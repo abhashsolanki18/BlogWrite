@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
 
 function App() {
   const [loading, setloading] = useState(true);
@@ -25,8 +27,8 @@ function App() {
   } else {
     return (
       <>
-        <div className="min-h-screen flex flex-wrap content-between bg-slate-800">
-          <dir className = "w-full block">
+        <div className=" min-h-screen flex flex-wrap content-between bg-slate-800">
+          <dir className = "w-full block text-white text-center">
             <Header />
             <main>
               {/* <Outlet /> */}
